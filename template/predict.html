@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet">
+    <title>Boston House</title>
+</head>
+<style>
+    body {
+        font-family: "ABeeZee";
+        height: 100%;
+        background-image: url("/static/bg2.jpg");
+        background-size: cover;
+    }
+
+    h1 {
+        font-family: "ABeeZee";
+        color: whitesmoke
+    }
+
+    .main {
+        font-family: "ABeeZee";
+        text-align: center;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 50px;
+        margin-left: 35%;
+        margin-right: 35%;
+        margin-top: 2%;
+        border-radius: 15px;
+        box-shadow: 0 0 15px 2px rgba(250, 250, 250, 0.3);
+        /* background-color: rgb(189, 97, 36); */
+        backdrop-filter: blur(20px);
+    }
+
+    input {
+        font-family: 'ABeeZee';
+        font-size: 20px;
+        text-decoration: none;
+        padding: 2px;
+        width: 400px;
+        height: 30px;
+        border-radius: 5px;
+        border: none;
+        text-align: center;
+        margin: 1%;
+    }
+
+    input::-webkit-input-placeholder {
+        color: black;
+        opacity: 0.2;
+    }
+
+    label {
+        font-size: 20px;
+    }
+
+    .button {
+        font-family: 'ABeeZee';
+        height: 50px;
+        width: 130px;
+        border-radius: 12px;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        transition: 0.2s;
+    }
+
+    .button:hover {
+        font-size: 20px;
+        border: none;
+        background-color: rgb(252, 51, 55);
+        box-shadow: 0px 0px 15px 2px rgb(252, 51, 55);
+        transition: 0.3s;
+    }
+
+    .main .pred {
+        color: whitesmoke;
+        margin: 20px;
+        font-size: 30px;
+
+    }
+
+    .main .info {
+        color: white;
+        font-size: 12px;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <form method="POST" id="back">
+            <h1>House Price Prediction</h1><br>
+            <div class="pred">
+                {{prediction}}
+            </div><br><br><br>
+            <input type="submit" value="Back" name="back" class="button" /><br><br>
+            <div class="info">
+                <p>*This prediction accuracy is 91.76%</p>
+            </div>
+
+        </form>
+    </div>
+
+
+</body>
+
+</html>
